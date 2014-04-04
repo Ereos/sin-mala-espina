@@ -56,6 +56,9 @@ public class MainActivity extends Activity
     	if (position == 0){
     		fragment = new BuscarFragment();
     		mTitle = "Prueba";
+    	}else if (position == 1 ){
+    		fragment = new ListGeneralFragment();
+    		mTitle = "Categor’as";
     	}
     	
     	
