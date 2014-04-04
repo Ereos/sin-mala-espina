@@ -3,13 +3,12 @@ package com.example.sinmalaespina;
 import java.util.ArrayList;
 
 import android.app.Fragment;
-import android.app.ListFragment;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
@@ -34,18 +33,19 @@ public class ListGeneralFragment extends Fragment {
 		tipos.add("Molusco");
 		
 		ListView lista = (ListView) getActivity().findViewById(R.id.lvListaGeneral);
-		lista.setAdapter(new AdaptadorListaCategorias(getActivity(), tipos));
+		lista.setAdapter(new AdaptadorLista(getActivity(), tipos));
 		
 		lista.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				
-				Toast.makeText(getActivity(), "Has pulsado: "+ position, Toast.LENGTH_LONG).show();
-				
+				Fragment fragment = null;
+		    	fragment = new ListDetalleFragment();
+		    	
+		         FragmentManager fragmentManager = getFragmentManager();
+		         fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 			}
-			
 		});
 	}
-
 }

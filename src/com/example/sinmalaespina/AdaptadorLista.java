@@ -17,12 +17,12 @@ import android.widget.TextView;
  * dos valores
  *
  */
-public class AdaptadorListaCategorias extends BaseAdapter {
+public class AdaptadorLista extends BaseAdapter {
 	Activity activity;
 	int numApartado;
 	ArrayList<String> arrayDatos;
 
-	public AdaptadorListaCategorias(Activity activity, ArrayList<String> arrayDatos) {
+	public AdaptadorLista(Activity activity, ArrayList<String> arrayDatos) {
 		super();
 		this.activity = activity;
 		this.arrayDatos = arrayDatos;
