@@ -81,6 +81,11 @@ public class Animal {
 	}
 	
 	public void setImagen(String imagen) {
-		this.imagen = imagen;
+		String[] aux = imagen.split(" ");
+		String n = "";
+		for (int i = 0; i < aux.length; i++) {
+				n = n+aux[i];
+		}
+		this.imagen = n;
 	}
 }
