@@ -55,8 +55,8 @@ public class Adapter_Descripciones extends BaseAdapter{
 		
 		final Animal item = animal.get(position);
 		
-		holder.ivTipo.setImageResource(item.getIdFotoMini());
-		holder.tvDescripcion.setText(item.getDescripcion());	
+		//holder.ivTipo.setImageResource(item.getIdFotoMini());
+		//holder.tvDescripcion.setText(item.getDescripcion());	
 		
 		return view;
 	}
