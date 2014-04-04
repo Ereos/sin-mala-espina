@@ -140,6 +140,7 @@ public class MainActivity extends Activity
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
+            
             return fragment;
         }
 
