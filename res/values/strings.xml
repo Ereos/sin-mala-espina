@@ -9,5 +9,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_ayuda">Ayuda</string>
     <string name="seccion_inicio">Inicio</string>
+    <string name="que_debemos_hacer">Diversificar nuestro consumo, evitando los productos inmaduros y eligiendo los frescos de proximidad.</string>
+    <string name="como">Priorizando las especies capturadas por la pesca artesanal, marisqueo a pie o mediante cerco litoral de pequeñas embarcaciones y los productos de temporada mirando la etiqueta para asegurarse.</string>
+    <string name="cuanto">Debemos reducir nuestro consumo al proceder la mayor parte de lugares lejanos, capturados con flotas grandes o procedentes de la acuicultura intensiva.</string>
+    <string name="donde">Preferiblemente en tiendas tradicionales y eligiendo aquellos productos con la información mínima obligatoria en la etiqueta.</string>
 
 </resources>
