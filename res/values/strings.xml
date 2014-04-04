@@ -2,11 +2,12 @@
 <resources>
 
     <string name="app_name">Sin mala espina</string>
-    <string name="title_section1">Buscar</string>
-    <string name="title_section2">Categorias</string>
-    <string name="title_section3">Ayuda</string>
+    <string name="seccion_buscar">Buscar</string>
+    <string name="seccion_categorias">Categorias</string>
+    <string name="seccion_ayuda">Ayuda</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_ayuda">Ayuda</string>
+    <string name="seccion_inicio">Inicio</string>
 
 </resources>
