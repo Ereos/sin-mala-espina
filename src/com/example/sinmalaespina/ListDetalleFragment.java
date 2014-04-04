@@ -3,23 +3,23 @@ package com.example.sinmalaespina;
 import java.util.ArrayList;
 
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
-public class ListGeneralFragment extends Fragment {
+public class ListDetalleFragment extends Fragment {
 	
-	public ListGeneralFragment(){}
+	public ListDetalleFragment() {}
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		
-		View rootView = inflater.inflate(R.layout.fragment_listgeneral, container, false);		
+		View rootView = inflater.inflate(R.layout.fragment_listdetalle, container, false);		
 		return rootView;
 	}
 	
@@ -27,25 +27,29 @@ public class ListGeneralFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 		
 		//Obtener datos de la base de datos
-		ArrayList<String> tipos = new ArrayList<String>();
-		tipos.add("Pez");
-		tipos.add("Crustaceo");
-		tipos.add("Molusco");
+		ArrayList<String> bichos = new ArrayList<String>();
+		bichos.add("Rodaballo");
+		bichos.add("Ca–a al mono");
+		bichos.add("O_O");
 		
-		ListView lista = (ListView) getActivity().findViewById(R.id.lvListaGeneral);
-		lista.setAdapter(new AdaptadorLista(getActivity(), tipos));
+		ListView lista = (ListView) getActivity().findViewById(R.id.lvDetalle);
+		lista.setAdapter(new AdaptadorLista(getActivity(), bichos));
 		
 		lista.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				
-				Fragment fragment = null;
-		    	fragment = new ListDetalleFragment();
-		    	
-		         FragmentManager fragmentManager = getFragmentManager();
-		         fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+				Toast.makeText(getActivity(), "Has pulsado: "+ position, Toast.LENGTH_LONG).show();
+				
 			}
+			
 		});
+				
+			
+		
+		
 	}
+	
+
 }

@@ -4,10 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ListView
-        android:id="@+id/lvListaGeneral"
+    <TextView
+        android:id="@+id/tvListaGeneral"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
- 
+        android:layout_height="40dip"
+        android:text="Large Text"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
 </LinearLayout>
