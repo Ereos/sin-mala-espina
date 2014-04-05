@@ -96,14 +96,19 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
+        
+        /**
+         * A–adir un nuevo elemento al menu desplegable
+         */
         mDrawerListView.setAdapter(new ArrayAdapter<String>(
                 getActionBar().getThemedContext(),
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
                 new String[]{
-                        getString(R.string.title_section1),
-                        getString(R.string.title_section2),
-                        getString(R.string.title_section3),
+                		getString(R.string.seccion_inicio),
+                        getString(R.string.seccion_categorias),
+                        getString(R.string.seccion_buscar),
+                        getString(R.string.seccion_ayuda),
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
@@ -188,7 +193,9 @@ public class NavigationDrawerFragment extends Fragment {
     }
 
     private void selectItem(int position) {
+    	
         mCurrentSelectedPosition = position;
+        
         if (mDrawerListView != null) {
             mDrawerListView.setItemChecked(position, true);
         }
@@ -235,19 +242,17 @@ public class NavigationDrawerFragment extends Fragment {
         // showGlobalContextActionBar, which controls the top-left area of the action bar.
         if (mDrawerLayout != null && isDrawerOpen()) {
             inflater.inflate(R.menu.global, menu);
-            showGlobalContextActionBar();
+            //showGlobalContextActionBar();
         }
         super.onCreateOptionsMenu(menu, inflater);
     }
 
+    /**
+     * Evento para ejecutar acciones del menu
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-
-        if (item.getItemId() == R.id.action_example) {
-            Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
             return true;
         }
 
