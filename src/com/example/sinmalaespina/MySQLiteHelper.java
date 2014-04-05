@@ -138,4 +138,32 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         return animal;
     }
  
+    public List<Animal> getAllBooks() {
+        List<Animal> books = new LinkedList<Animal>();
+  
+        // 1. build the query
+        String query = "SELECT  * FROM " + TABLE_ANIMAL;
+  
+        // 2. get reference to writable DB
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+  
+        // 3. go over each row, build book and add it to list
+        Animal animal = null;
+        if (cursor.moveToFirst()) {
+            do {
+                animal = new Animal();
+                animal.(cursor.getString(1));
+                animal.setAuthor(cursor.getString(2));
+  
+                // Add book to books
+                books.add(book);
+            } while (cursor.moveToNext());
+        }
+  
+        Log.d("getAllBooks()", books.toString());
+  
+        // return books
+        return books;
+    }		
 }
